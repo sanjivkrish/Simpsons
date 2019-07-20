@@ -9,6 +9,9 @@ const useStyles = makeStyles({
   root: {
     flexGrow: 1,
   },
+  toolBar: {
+    justifyContent: "center"
+  }
 });
 
 function Header({ siteTitle }) {
@@ -17,7 +20,7 @@ function Header({ siteTitle }) {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar className={classes.toolBar}>
           <Typography variant="h6" color="inherit">
             {siteTitle}
           </Typography>
