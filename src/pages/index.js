@@ -1,10 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
+
+import Header from "../components/header"
 
 const IndexPage = () => (
-  <div>
-    Hello World
-  </div>
+  <>
+    <Header siteTitle="FUTURAMA" />
+  </>
 )
 
 export default IndexPage
