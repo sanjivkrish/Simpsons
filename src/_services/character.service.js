@@ -1,5 +1,5 @@
 const config = {
-    baseUrl :  " futuramaapi.herokuapp.com",
+    baseUrl :  "https://futuramaapi.herokuapp.com",
     characters : "/api/v2/characters",
     quotes : "/api/characters/"
 }
