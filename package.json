@@ -1,11 +1,11 @@
 {
-  "name": "Futurama-quotes",
+  "name": "simpsons",
   "private": true,
   "description": "A simple quotes finder for futurama characters",
   "version": "0.1.0",
   "author": "Sanjiv Krishnasamy <sanjiv436.k@gmail.com>",
   "engines": {
-    "node": "11.0.0"
+    "node": "10.16.0"
   },
   "dependencies": {
     "@material-ui/core": "^4.2.1",
