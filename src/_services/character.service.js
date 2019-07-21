@@ -1,12 +1,13 @@
 const config = {
     baseUrl :  "https://futuramaapi.herokuapp.com",
     characters : "/api/v2/characters",
-    quotes : "/api/characters/"
+    quotesByCharacter : "/api/characters/"
 }
 
 export const characterService = {
     getAllCharacters,
-    getQuotesByCharacter
+    getQuotesByCharacter,
+    getCharactersByQuery
 };
 
 // Handle response for all API
@@ -27,7 +28,13 @@ function getAllCharacters() {
 }
 
 function getQuotesByCharacter(name) {
-    const targetURL = `${config.baseUrl}${config.quotes}${name}`;
+    const targetURL = `${config.baseUrl}${config.quotesByCharacter}${name}`;
+
+    return fetch(targetURL).then(handleResponse);
+}
+
+function getCharactersByQuery(name) {
+    const targetURL = `${config.baseUrl}${config.characters}?search=${name}`;
 
     return fetch(targetURL).then(handleResponse);
 }

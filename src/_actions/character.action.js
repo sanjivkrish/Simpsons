@@ -2,7 +2,8 @@ import { characterService } from "../_services/character.service"
 
 export const characterAction = {
     getAllCharacters,
-    getQuotesByCharacter
+    getQuotesByCharacter,
+    getCharactersByQuery
 }
 
 function getAllCharacters() {
@@ -30,6 +31,20 @@ function getQuotesByCharacter(name) {
                 },
                 error => {
                     dispatch({ type : "GET_QUOTES_SUCCESS", error })
+                }
+            )
+    }
+} 
+
+function getCharactersByQuery(name) {
+    return dispatch => {
+        characterService.getCharactersByQuery(name)
+            .then(
+                characters => {
+                    dispatch({ type : "GET_CHARACTERS_SUCCESS", characters })
+                },
+                error => {
+                    dispatch({ type : "GET_CHARACTERS_FAILURE", error })
                 }
             )
     }
