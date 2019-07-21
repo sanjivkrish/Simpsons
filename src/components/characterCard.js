@@ -13,11 +13,15 @@ const styles = theme => ({
         justifyContent: "center"
     },
     card: {
-        width: 345,
+        width: 500,
+    },
+    imgCard: {
+        objectFit: "contain"
     },
 });
 
 function CharacterCard ({ classes, activeCharacter }) {
+    console.log(activeCharacter)
     if (!activeCharacter) return (<></>)
 
     return (
@@ -26,6 +30,7 @@ function CharacterCard ({ classes, activeCharacter }) {
             <CardActionArea>
                 <CardMedia
                 component="img"
+                className={classes.imgCard}
                 alt="Contemplative Reptile"
                 height="300"
                 image={activeCharacter.PicUrl}
@@ -34,12 +39,6 @@ function CharacterCard ({ classes, activeCharacter }) {
                 <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                 {activeCharacter.Name}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    {activeCharacter.Species}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    First appearance in {activeCharacter.FirstAppearance}
                 </Typography>
                 </CardContent>
             </CardActionArea>
