@@ -1,9 +1,12 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "Futurama-quotes",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple quotes finder for futurama characters",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Sanjiv Krishnasamy <sanjiv436.k@gmail.com>",
+  "engines": {
+    "node": "11.0.0"
+  },
   "dependencies": {
     "@material-ui/core": "^4.2.1",
     "@material-ui/icons": "^4.2.1",
@@ -40,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/sanjivkrish/Simpsons"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/sanjivkrish/Simpsons/issues"
   }
 }
